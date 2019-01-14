@@ -1,0 +1,141 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item (click)="scrollTo('menu1')">Menu 1
+        <ng-container *ngIf="currentSection==='menu1'"></ng-container></a>
+      <a mat-list-item (click)="scrollTo('menu2')">Menu 2
+        <ng-container *ngIf="currentSection==='menu2'"></ng-container></a>
+      <a mat-list-item (click)="scrollTo('menu3')">Menu 3
+        <ng-container *ngIf="currentSection==='menu3'"></ng-container>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>AngularMaterialAssignment</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div id="parentDiv" pagescrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+      <div id="menu1">
+        <h2>Menu 1</h2>
+        <p>An Indian farmer is one of the most important members of society. He is the giver of food to the people, to
+          all practical purposes.
+
+          He gets up early in the morning and goes to his fields. Nowadays in a number of states, the days of ploughing
+          the fields with the help of oxen are almost over except for the farmers who are too poor to purchase a
+          tractor.
+
+          The farmer has many kinds of works to do. He ploughs his fields. He sows the seeds. He waters the fields
+          regularly. He has to take care of the crops. He has to protect them against hail and frost. He has to apply
+          compost and fertilizers. He has also to sprinkle insecticides and pesticides to protect the crops against
+          pests and insects.The Indian farmer is a hard-working man. He works from morning till evening in the
+          scorching heat and biting cold. Early in the morning he drives his oxen to the fields. He ploughs the fields,
+          sows seeds and waters the plants. looks after the crops and saves them from being spoiled by stray cattle or
+          wild animals. He enjoys no holiday. At noon he has his meals under a shady tree and takes a little rest. In
+          the evening he returns home.
+
+          The farmer leads a simple life. He lives in a mud house, eats simple food and wears coarse clothes. Generally
+          he is illiterate. He believes in old customs and superstitions. His cattle are his most valuable property.
+          Often during drought crops fail and he is in trouble. When the crop ripens, he feels happy. He reaps it,
+          threshes it and takes the corn to the market. In times of a bad harvest he has little money to buy seeds and
+          manure and runs into debt.
+
+          Recently, the use of agricultural machinery and chemical manures and the provision of credit facilities by
+          cooperative societies and rural banks have improved his lot and changed his outlook on life.The Indian farmer
+          is a hard-working man. He works from morning till evening in the scorching heat and biting cold. Early in the
+          morning he drives his oxen to the fields. He ploughs the fields, sows seeds and waters the plants. looks
+          after the crops and saves them from being spoiled by stray cattle or wild animals. He enjoys no holiday. At
+          noon he has his meals under a shady tree and takes a little rest. In the evening he returns home.
+
+          The farmer leads a simple life. He lives in a mud house, eats simple food and wears coarse clothes. Generally
+          he is illiterate. He believes in old customs and superstitions. His cattle are his most valuable property.
+          Often during drought crops fail and he is in trouble. When the crop ripens, he feels happy. He reaps it,
+          threshes it and takes the corn to the market. In times of a bad harvest he has little money to buy seeds and
+          manure and runs into debt.
+
+          Recently, the use of agricultural machinery and chemical manures and the provision of credit facilities by
+          cooperative societies and rural banks have improved his lot and changed his outlook on life.</p>
+      </div>
+      <div id="menu2">
+        <h1>Menu 2</h1>
+        <p>An Indian farmer is one of the most important members of society. He is the giver of food to the people, to
+          all practical purposes.
+
+          He gets up early in the morning and goes to his fields. Nowadays in a number of states, the days of ploughing
+          the fields with the help of oxen are almost over except for the farmers who are too poor to purchase a
+          tractor.
+
+          The farmer has many kinds of works to do. He ploughs his fields. He sows the seeds. He waters the fields
+          regularly. He has to take care of the crops. He has to protect them against hail and frost. He has to apply
+          compost and fertilizers. He has also to sprinkle insecticides and pesticides to protect the crops against
+          pests and insects.Most of the old farmers are illiterate. But the farmers of the new generation are mostly
+          educated. Their being educated helps them a lot. They get the soil of their fields tested in a laboratory.
+
+          Most of the farmers are not interested in free electricity and water. They rather want an uninterrupted
+          supply of electricity for which they are ready to pay.
+
+          Small farmers should also start some cottage industries. Crop rotation system and contract crop system has
+          been started in some states. Such steps are in the right direction and will help the farmers in the long
+          run.The Indian farmer is quite ignorant. He still follows the old methods of agriculture. Owing to t his
+          poverty and ignorance, he cannot (or does not) make use of scientific implements and fertilizers as well.
+          Indian agriculture is dependedent on the monsoon. Very often it fails, sometimes it destroys his standing
+          crops. Thus monsoon betrays our farmers. Frequently, rains cause floods which destroy crops. Thus we see that
+          poverty and ignorance are two great curses for the Indian farmer.The Indian farmer is a hard-working man. He
+          works from morning till evening in the scorching heat and biting cold. Early in the morning he drives his
+          oxen to the fields. He ploughs the fields, sows seeds and waters the plants. looks after the crops and saves
+          them from being spoiled by stray cattle or wild animals. He enjoys no holiday. At noon he has his meals under
+          a shady tree and takes a little rest. In the evening he returns home.
+
+          The farmer leads a simple life. He lives in a mud house, eats simple food and wears coarse clothes. Generally
+          he is illiterate. He believes in old customs and superstitions. His cattle are his most valuable property.
+          Often during drought crops fail and he is in trouble. When the crop ripens, he feels happy. He reaps it,
+          threshes it and takes the corn to the market. In times of a bad harvest he has little money to buy seeds and
+          manure and runs into debt.
+
+          Recently, the use of agricultural machinery and chemical manures and the provision of credit facilities by
+          cooperative societies and rural banks have improved his lot and changed his outlook on life.The remedy of the
+          Indian farmer’s backwardness lies in spreading literacy among the farmers. Government should help them with
+          money, implements and good seeds. There should be good arrangements for irrigation also.
+
+          It is a matter of great pleasure that today Government is doing is best to help the Indian farmer. His
+          position has now improved. He is now buying better agricultural implements, good seeds and fertilizers. The
+          old out- dated plough is now being replaced by the tractor.
+
+          In the days of English rule the farmer was in the clutches of money lenders and land lords. But now the
+          position is changed. The government , co- operative societies an d banks are helping our farmers. These three
+          agencies have brought revolution in rural credit.
+
+          Distribution of surplus land, consolidation of land holdings, implementation of ceiling laws and other land
+          reforms have brought about a change in the status of Indian farmer. Welfare measures like spread of education
+          , electrification and supply of water, building of roads, schools and hospitals have raised the standards of
+          living of the farmer. Now he lives in the pucca houses and puts on better clothes. He looks very cheerful. If
+          our farmers and we should co- operate our government, the conditions of the Indian farmer will improve in the
+          future.</p>
+      </div>
+      <div id="menu3">
+        <h1>Menu 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim
+          sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
+          a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non
+          fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a,
+          enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
+          Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales.
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris
+          ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+
+          Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla
+          sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros
+          vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam.
+          Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus,
+          convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum
+          posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.</p>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
